@@ -775,6 +775,8 @@ namespace SkiaSharp
 		{
 #if WINDOWS_UWP
 			var isUnix = false;
+#elif NET_CORE
+			var isUnix = RuntimeInformation.IsOSPlatform(OSPlatform.OSX) || RuntimeInformation.IsOSPlatform(OSPlatform.Linux);
 #else
 			var isUnix = Environment.OSVersion.Platform == PlatformID.MacOSX || Environment.OSVersion.Platform == PlatformID.Unix;
 #endif

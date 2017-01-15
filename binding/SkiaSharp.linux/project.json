@@ -1,0 +1,35 @@
+{
+  "version": "1.0.0-*",
+  "title": "SkiaSharp for .net core",
+  "authors": [
+    "Cyril TOVENA"
+  ],
+  "name":"SkiaSharp",
+  "description": "SkiaSharp library for .net core, based on skia 2d graphics from google.",
+  "buildOptions": {
+    "allowUnsafe": true,
+    "debugType": "portable",
+    "emitEntryPoint": false,
+    "optimize": true,
+    "platform": "anycpu",
+    "outputName": "SkiaSharp",
+    "define": [
+      "NET_CORE"
+    ],
+    "compile": {
+      "include": ["../Binding/*.cs"]
+    }
+  },
+  "dependencies": {},
+  "frameworks": {
+    "netcoreapp1.1": {
+      "dependencies": {
+        "Microsoft.NETCore.App": {
+          "type": "platform",
+          "version": "1.1.0"
+        }
+      },
+      "imports": "dnxcore50"
+    }
+  }
+}
